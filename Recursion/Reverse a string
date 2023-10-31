@@ -1,1 +1,7 @@
+public String reverseString (String input) {
+  if (input.equals("") {
+    return "";  // base case returns empty string
 
+//What is the smallest amount of work I can do in each iteration?
+  return reverseString(input.substring(1)) + input.charAt(0);
+}
