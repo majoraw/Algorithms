@@ -1,0 +1,14 @@
+//Use 2 pointers but we are going to use recursion
+public static boolean isPalindrome(String input) {
+  //Define the base case or stopping condition. Is the input string length 0 or 1
+  if (input.length() == 0 || input.length() == 1) {
+    return true;
+
+  //Do some work to shrink the problem space. Note that we have 2 pointers here which must always be the same
+  if (input.charAt(0) == input.charAt(input.length() - 1)) {
+    return isPalindrome(input.substring(1, input.length() - 1));
+  }
+
+  //Additional base case to handle non palindrome. If characters dont match up we terminate
+  return false;
+}
