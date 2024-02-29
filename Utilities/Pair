@@ -1,0 +1,24 @@
+/**
+In Java, there is no built-in pair class as in C++.
+
+If you want to implement a stack of pairs in Java, you'll need to define your own Pair class or use a library that provides such functionality. 
+
+For example, you can define a Pair class like this:
+*/
+
+import java.util.*;
+
+class Pair<X, Y> {
+    public final X first;
+    public final Y second;
+
+    public Pair(X first, Y second) {
+        this.first = first;
+        this.second = second;
+    }
+}
+
+Stack<Pair<Integer, Integer>> st = new Stack<>();
+
+//This Pair class is generic, allowing you to use it with different types of objects. It has two public final fields first and second representing the first and second elements of the pair, respectively. 
+The constructor initializes these fields. Optionally, I've overridden the toString(), equals(), and hashCode() methods for better usability and compatibility with Java collections.
